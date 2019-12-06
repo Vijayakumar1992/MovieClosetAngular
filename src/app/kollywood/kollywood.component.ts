@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-kollywood',
-  template: `
-    <p>
-      kollywood works!
-    </p>
-  `,
+  templateUrl: './kollywood.component.html',
   styleUrls: ['./kollywood.component.css']
 })
 export class KollywoodComponent implements OnInit {
