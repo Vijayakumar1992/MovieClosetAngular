@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { HwoodListComponent } from './hollywood/hwood-list/hwood-list.component'
 import { HwoodViewComponent } from './hollywood/hwood-view/hwood-view.component';
 import { HwoodItemComponent } from './hollywood/hwood-item/hwood-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HollywoodService } from './hollywood/hollywood.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [HollywoodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

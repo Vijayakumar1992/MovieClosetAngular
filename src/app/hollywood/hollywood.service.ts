@@ -16,10 +16,10 @@ export class HollywoodService {
 
 
    //getting the list of Movies and a single movie respectively.
-getHMovie(id: string): Document {
+getHMovie(id: string): Hollywood {
   for (const hollywoodMovies of this.hollywoodMovies) {
     if (hollywoodMovies.id === id) {
-      return document;
+      return hollywoodMovies;
     }
   }
   return null;
