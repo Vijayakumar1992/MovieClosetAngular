@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Hollywood } from './hollywood.model';
+
 
 @Component({
   selector: 'app-hollywood',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hollywood.component.css']
 })
 export class HollywoodComponent implements OnInit {
+
+  selectedHwoodMovies: Hollywood;
 
   constructor() { }
 

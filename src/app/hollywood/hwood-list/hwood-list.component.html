@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row pad-left-right">
+      <span class="pull-left title">Hollywood</span>
+      <a  routerLink="new" class="btn btn-success pull-right">Add Movie</a>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="center-panel">
+      <app-hwood-item
+      *ngFor="let hollywoodMovie of hollywoodMovies" 
+      [hollywood]="hollywood">
+      </app-hwood-item>
+    </div>
+  </div>
+
+</div>

@@ -8,7 +8,12 @@ import { HollywoodComponent } from './hollywood/hollywood.component';
 import { KollywoodComponent } from './kollywood/kollywood.component';
 import { AddmoviesComponent } from './addmovies/addmovies.component';
 import { HeaderComponent } from './header/header.component';
-import { HwoodmovielistComponent } from './hollywood/hwoodmovielist/hwoodmovielist.component';
+import { HwoodDetailComponent } from './hollywood/hwood-detail/hwood-detail.component';
+import { HwoodEditComponent } from './hollywood/hwood-edit/hwood-edit.component';
+import { HwoodListComponent } from './hollywood/hwood-list/hwood-list.component';
+import { HwoodViewComponent } from './hollywood/hwood-view/hwood-view.component';
+import { HwoodItemComponent } from './hollywood/hwood-item/hwood-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,16 @@ import { HwoodmovielistComponent } from './hollywood/hwoodmovielist/hwoodmovieli
     KollywoodComponent,
     AddmoviesComponent,
     HeaderComponent,
-    HwoodmovielistComponent,
+    HwoodDetailComponent,
+    HwoodEditComponent,
+    HwoodListComponent,
+    HwoodViewComponent,
+    HwoodItemComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

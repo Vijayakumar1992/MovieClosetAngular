@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-moviecloset';
-  selectedFeature: string = 'documents';
+  selectedFeature: string = 'hollywood';
 
 
   switchView(selectedFeature: string) {
