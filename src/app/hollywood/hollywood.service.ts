@@ -16,14 +16,47 @@ export class HollywoodService {
 
 
    //getting the list of Movies and a single movie respectively.
-getHMovie(id: string): Hollywood {
-  for (const hollywoodMovies of this.hollywoodMovies) {
-    if (hollywoodMovies.id === id) {
-      return hollywoodMovies;
-    }
-  }
-  return null;
+// getHMovie(id: string): Hollywood {
+//   for (const hollywoodMovies of this.hollywoodMovies) {
+//     if (hollywoodMovies.id === id) {
+//       return hollywoodMovies;
+//     }
+//   }
+//   return null;
+// }
+
+
+getHMovie() {
+  this.http.get<{ message: string, hollywood: Hollywood[] }>('http://localhost:3000/hollywood')
+    .subscribe(
+      (documentData) => {
+        this.hollywoodMovies = documentData.hollywood;
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
 }
+
+
+deleteHMovie(hollywood: Hollywood) {
+  if (!hollywood) {
+    return;
+  }
+  const pos = this.hollywoodMovies.findIndex(d => d.id === hollywood.id);
+
+  if (pos < 0) {
+    return;
+  }  
+
+  this.http.delete('http://localhost:3000/hollywood/' + hollywood.id)
+    .subscribe(
+      (response: Response) => {
+        this.hollywoodMovies.splice(pos, 1);
+      }
+    );
+}
+
 
 
 

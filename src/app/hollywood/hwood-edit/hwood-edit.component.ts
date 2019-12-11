@@ -29,7 +29,7 @@ export class HwoodEditComponent implements OnInit {
           return;
         }
 
-        this.originalHollywood = this.hollywoodService.getHMovie(this.id);
+        // this.originalHollywood = this.hollywoodService.getHMovie(this.id);
         if (this.originalHollywood === undefined || this.originalHollywood === null) {
           this.editMode = false;
           return;
