@@ -29,7 +29,7 @@ export class HwoodEditComponent implements OnInit {
           return;
         }
 
-        // this.originalHollywood = this.hollywoodService.getHMovie(this.id);
+        this.originalHollywood = this.hollywoodService.getHMovie(this.id);
         if (this.originalHollywood === undefined || this.originalHollywood === null) {
           this.editMode = false;
           return;
@@ -43,19 +43,19 @@ export class HwoodEditComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     const value = form.value;
-    const newHMovie = new Hollywood('', value.name, value.type, value.genre,)
+    const newHMovie = new Hollywood('','', value.name, value.type, value.genre, null)
 
     if (this.editMode === true) {
       this.hollywoodService.updateHollywoodMovie(this.originalHollywood, newHMovie);
     } else {
       this.hollywoodService.addHMovies(newHMovie);
     }
-    this.router.navigate(['/hollywood']);
+    this.router.navigate(['/hollywoods']);
   }
 
 
   onCancel(){
-    this.router.navigate(['/hollywood']);
+    this.router.navigate(['/hollywoods']);
   }
 
 

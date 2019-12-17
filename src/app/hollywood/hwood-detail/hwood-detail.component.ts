@@ -25,8 +25,8 @@ export class HwoodDetailComponent implements OnInit {
     ngOnInit() {
       this.route.params.subscribe(
         (params: Params) => {
-          this.id = params['id'];
-          // this.hollywood = this.hollywoodService.getHMovie(this.id);
+          this.id = params['id'];    
+          this.hollywood = this.hollywoodService.getHMovie(this.id);
         }
       );
     }
@@ -39,7 +39,7 @@ export class HwoodDetailComponent implements OnInit {
   
     onDelete() {
       this.hollywoodService.deleteHMovie(this.hollywood);
-      this.router.navigate(['/hollywood'], { relativeTo: this.route });
+      this.router.navigate(['/hollywoods'], { relativeTo: this.route });
     }
 
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {TooltipPosition} from '@angular/material/tooltip';
+import { Bollywood } from './bollywood.model';
 
 
 @Component({
@@ -10,8 +9,7 @@ import {TooltipPosition} from '@angular/material/tooltip';
 })
 export class BollywoodComponent implements OnInit {
 
-  // positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
-  // position = new FormControl(this.positionOptions[0]);
+  selectedBwoodMovies: Bollywood;
 
   constructor(){
     

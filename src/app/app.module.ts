@@ -16,6 +16,15 @@ import { HwoodViewComponent } from './hollywood/hwood-view/hwood-view.component'
 import { HwoodItemComponent } from './hollywood/hwood-item/hwood-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HollywoodService } from './hollywood/hollywood.service';
+import { BwoodDetailComponent } from './bollywood/bwood-detail/bwood-detail.component';
+import { BwoodEditComponent } from './bollywood/bwood-edit/bwood-edit.component';
+import { BwoodItemComponent } from './bollywood/bwood-item/bwood-item.component';
+import { BwoodListComponent } from './bollywood/bwood-list/bwood-list.component';
+import { KwoodDetailComponent } from './kollywood/kwood-detail/kwood-detail.component';
+import { KwoodEditComponent } from './kollywood/kwood-edit/kwood-edit.component';
+import { KwoodItemComponent } from './kollywood/kwood-item/kwood-item.component';
+import { KwoodListComponent } from './kollywood/kwood-list/kwood-list.component';
+import { BollywoodService } from './bollywood/bollywood.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +39,14 @@ import { HollywoodService } from './hollywood/hollywood.service';
     HwoodListComponent,
     HwoodViewComponent,
     HwoodItemComponent,
+    BwoodDetailComponent,
+    BwoodEditComponent,
+    BwoodItemComponent,
+    BwoodListComponent,
+    KwoodDetailComponent,
+    KwoodEditComponent,
+    KwoodItemComponent,
+    KwoodListComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +54,7 @@ import { HollywoodService } from './hollywood/hollywood.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [HollywoodService],
+  providers: [HollywoodService, BollywoodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

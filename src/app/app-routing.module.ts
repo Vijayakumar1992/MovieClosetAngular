@@ -5,9 +5,9 @@ import { HwoodEditComponent } from './hollywood/hwood-edit/hwood-edit.component'
 import { HwoodDetailComponent } from './hollywood/hwood-detail/hwood-detail.component';
 
 const app_Routes: Routes = [
-  { path: '', redirectTo: '/hollywood', pathMatch: 'full' },
+  { path: '', redirectTo: '/hollywoods', pathMatch: 'full' },
   {
-    path: 'hollywood', component: HollywoodComponent,
+    path: 'hollywoods', component: HollywoodComponent,
     children:
       [
         { path: 'new', component: HwoodEditComponent },
